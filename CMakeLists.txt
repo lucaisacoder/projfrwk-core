@@ -7,7 +7,7 @@ include(${CMAKE_SOURCE_DIR}/../../tools/cmake/util/print.cmake)
 
 get_filename_component(SDK_SOURCE_DIR ${CMAKE_SOURCE_DIR}/../../ ABSOLUTE)
 
-include(${SDK_SOURCE_DIR}/tools/cmake/util/InstallConfig.cmake)
+#include(${SDK_SOURCE_DIR}/tools/cmake/util/InstallConfig.cmake)
 
 # Set SOURCES variable
 set(DIR_SRCS code/src)
@@ -48,9 +48,14 @@ endforeach()
 #set(LIBRARY_TYPE SHARED)
 #set(LIBRARY_TYPE STATIC)
 #set(CMAKE_BUILD_TYPE DEBUG)
-set(CMAKE_BUILD_TYPE UNIT_TEST)
-set(HEADERS ${HEADERS_UT})
-set(SOURCES ${SOURCES_UT})
-set(DEFINITION -DUNIT_TEST)
+#set(CMAKE_BUILD_TYPE UNIT_TEST)
+#set(HEADERS ${HEADERS_UT})
+#set(SOURCES ${SOURCES_UT})
+#set(DEFINITION -DUNIT_TEST)
+set(REQ_LIBS osal log)
+set(REQ_LIBS_PATH ${SDK_SOURCE_DIR}/components/osal/installed/lib/CMake/osal ${SDK_SOURCE_DIR}/components/log/installed/lib/CMake/log)
+#set(REQ_LIBS osal)
+#set(REQ_LIBS_PATH ${SDK_SOURCE_DIR}/components/osal/installed/lib/CMake/osal)
+#message("0000000 REQ_LIBS_PATH = ${REQ_LIBS_PATH}")
 #include(${SDK_SOURCE_DIR}/tools/cmake/util/LibraryConfig.cmake)
 include(${SDK_SOURCE_DIR}/tools/cmake/util/BinConfig.cmake) #只编译lib，最后link时候再对应生成bin
