@@ -1,1 +1,2 @@
-# projfrwk-core
+# projfrwk-com-log
+project framework component log repo
