@@ -1,7 +1,12 @@
 menu "CORE CORE Configuration"
-    config CORE_CORE_INCLUDE_STATIC_LIB
-        bool "Enable include static lib(from gcc)"
+    config COM_LOG_STATIC_LIB
+        bool "Enable COM LOG static lib"
         default n
         help
-            Enable include static lib(from gcc)
+            nable COM LOG static lib
+    config COM_OSAL_STATIC_LIB
+        bool "Enable COM OSAL static lib"
+        default n
+        help
+            nable COM OSAL static lib
 endmenu
