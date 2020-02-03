@@ -55,7 +55,7 @@ endforeach()
 set(REQ_LIBS osal log)
 set(REQ_LIBS_PATH ${SDK_SOURCE_DIR}/components/osal/installed/lib/CMake/osal ${SDK_SOURCE_DIR}/components/log/installed/lib/CMake/log)
 #set(REQ_LIBS osal)
-#set(REQ_LIBS_PATH ${SDK_SOURCE_DIR}/components/osal/installed/lib/CMake/osal)
+#set(REQ_LIBS_PATH ${SDK_SOURCE_DIR}/components/osal ${SDK_SOURCE_DIR}/components/log)
 #message("0000000 REQ_LIBS_PATH = ${REQ_LIBS_PATH}")
 #include(${SDK_SOURCE_DIR}/tools/cmake/util/LibraryConfig.cmake)
 include(${SDK_SOURCE_DIR}/tools/cmake/util/BinConfig.cmake) #只编译lib，最后link时候再对应生成bin
