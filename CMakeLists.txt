@@ -6,7 +6,8 @@ include(${CMAKE_SOURCE_DIR}/../../tools/cmake/util/SetEnv.cmake)
 include(${CMAKE_SOURCE_DIR}/../../tools/cmake/util/Print.cmake)
 
 get_filename_component(SDK_SOURCE_DIR ${CMAKE_SOURCE_DIR}/../../ ABSOLUTE)
-
+set(REQ_LIBS log osal)
+set(REQ_LIBS_PATH ${SDK_SOURCE_DIR}/components/osal/installed/lib/CMake/osal ${SDK_SOURCE_DIR}/components/log/installed/lib/CMake/log)
 include(${SDK_SOURCE_DIR}/tools/cmake/util/InstallConfig.cmake)
 
 # Set SOURCES variable
@@ -52,8 +53,8 @@ set(LIBRARY_TYPE STATIC)
 #set(HEADERS ${HEADERS_UT})
 #set(SOURCES ${SOURCES_UT})
 #set(DEFINITION -DUNIT_TEST)
-set(REQ_LIBS log osal)
-set(REQ_LIBS_PATH ${SDK_SOURCE_DIR}/components/osal/installed/lib/CMake/osal ${SDK_SOURCE_DIR}/components/log/installed/lib/CMake/log)
+##set(REQ_LIBS log osal)
+##set(REQ_LIBS_PATH ${SDK_SOURCE_DIR}/components/osal/installed/lib/CMake/osal ${SDK_SOURCE_DIR}/components/log/installed/lib/CMake/log)
 #set(REQ_LIBS osal)
 #set(REQ_LIBS_PATH ${SDK_SOURCE_DIR}/components/osal ${SDK_SOURCE_DIR}/components/log)
 #message("0000000 REQ_LIBS_PATH = ${REQ_LIBS_PATH}")
